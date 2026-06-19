@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+html, body {
+  background-color: #040405;
+  color: #f3f4f6;
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Montserrat", sans-serif;
+
+  --color-surface: #0a0a0c;
+  --color-surface-dim: #050506;
+  --color-surface-bright: #1c1c24;
+  --color-surface-container-lowest: #020203;
+  --color-surface-container-low: #0c0c10;
+  --color-surface-container: #101014;
+  --color-surface-container-high: #16161c;
+  --color-surface-container-highest: #20202a;
+  --color-on-surface: #f3f4f6;
+  --color-on-surface-variant: #9ca3af;
+  --color-inverse-surface: #f3f4f6;
+  --color-inverse-on-surface: #111827;
+  --color-outline: #4b5563;
+  --color-outline-variant: #374151;
+  --color-surface-tint: #a855f7;
+  --color-primary: #a855f7;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #000000;
+  --color-on-primary-container: #a855f7;
+  --color-inverse-primary: #7e22ce;
+  --color-secondary: #c084fc;
+  --color-on-secondary: #3b0764;
+  --color-secondary-container: #581c87;
+  --color-on-secondary-container: #f3e8ff;
+  --color-tertiary: #d8b4fe;
+  --color-on-tertiary: #581c87;
+  --color-tertiary-container: #000000;
+  --color-on-tertiary-container: #c084fc;
+  --color-error: #fca5a5;
+  --color-on-error: #450a0a;
+  --color-error-container: #7f1d1d;
+  --color-on-error-container: #fecaca;
+  --color-primary-fixed: #f3f4f6;
+  --color-primary-fixed-dim: #e5e7eb;
+  --color-on-primary-fixed: #111827;
+  --color-on-primary-fixed-variant: #374151;
+  --color-secondary-fixed: #edd6ff;
+  --color-secondary-fixed-dim: #d8b4fe;
+  --color-on-secondary-fixed: #2e004f;
+  --color-on-secondary-fixed-variant: #581c87;
+  --color-tertiary-fixed: #f3e8ff;
+  --color-tertiary-fixed-dim: #d8b4fe;
+  --color-on-tertiary-fixed: #2e004f;
+  --color-on-tertiary-fixed-variant: #581c87;
+  --color-background: #040405;
+  --color-on-background: #f3f4f6;
+  --color-surface-variant: #20202a;
+}
+
+@layer utilities {
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.3);
+  }
+
+  .glow-active {
+    box-shadow: 0 0 20px 0 rgba(138, 43, 226, 0.3);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+  }
+
+  .bg-void-gradient {
+    background: radial-gradient(circle at 20% 30%, rgba(0, 0, 128, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(138, 43, 226, 0.1) 0%, transparent 50%);
+  }
+
+  /* Custom Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #8A2BE2;
+    border-radius: 4px;
+  }
+}
